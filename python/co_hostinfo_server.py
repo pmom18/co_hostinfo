@@ -39,7 +39,7 @@ def get_host_info():
     return socket.gethostname() + " " + socket.gethostbyname(socket.gethostname()) + "\n"
 
 def main():
-    """Registers signal & args handlers then runs the server"""
+    """Registers signal & args handlers then runs the server using AI"""
     signal.signal(signal.SIGTERM, terminate)
     parser = argparse.ArgumentParser(description='Accept a port number.')
     parser.add_argument('port', default='9898', type=int, nargs='?',

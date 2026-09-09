@@ -7,7 +7,7 @@ import signal
 from io import StringIO, BytesIO
 
 # Import the module to test
-from hostinfo_server import (
+from co_hostinfo_server import (
     get_host_info,
     SimpleHTTPRequestHandler,
     run_web_server,
@@ -98,12 +98,12 @@ class TestHostInfoServer(unittest.TestCase):
         self.assertIn('Termination requested', output)
     
     @patch('signal.signal')
-    @patch('hostinfo_server.run_web_server')
+    @patch('co_hostinfo_server.run_web_server')
     def test_main(self, mock_run_web_server, mock_signal):
         """Test that main sets up signal handler and starts server"""
         # Save original sys.argv and replace with test values
         original_argv = sys.argv
-        sys.argv = ['hostinfo_server.py', '8080']
+        sys.argv = ['co_hostinfo_server.py', '8080']
         
         try:
             # Execute function

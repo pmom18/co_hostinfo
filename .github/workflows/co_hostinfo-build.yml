@@ -26,5 +26,5 @@ jobs:
     
     - name: Verify code builds
       run: |
-        python -m py_compile python/hostinfo_server.py
+        python -m py_compile python/co_hostinfo_server.py
         ls -lR python/

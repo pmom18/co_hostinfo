@@ -23,8 +23,8 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
 def run_web_server(port):
     """Run a webserver the runs forever to respond with the host info"""
     server = "0.0.0.0"
-    start_time = datetime.now()
-    print(f"Server listening on http://{server}:{port}, started on {start_time}")
+    now_time = datetime.now()
+    print(f"Server listening on http://{server}:{port}, started on {now_time}")
     httpd = HTTPServer(('', port), SimpleHTTPRequestHandler)
     httpd.serve_forever()
 

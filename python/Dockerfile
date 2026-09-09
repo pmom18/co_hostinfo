@@ -1,5 +1,5 @@
 FROM docker.io/python:3-alpine
-WORKDIR /usr/src/hostinfo
+WORKDIR /usr/src/co_hostinfo
 COPY ./co_hostinfo_server.py
 RUN chown 1000:1000 co_hostinfo_server.py && chmod 500 co_hostinfo_server.py && pip uninstall pip -y
 LABEL org.opencontainers.image.ref.name=co_hostinfo

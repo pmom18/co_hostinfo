@@ -32,7 +32,7 @@ class TestHostInfoServer(unittest.TestCase):
         # Verify result
         self.assertEqual(result, expected)
     
-    @patch('hostinfo_server.get_host_info')
+    @patch('co_hostinfo_server.get_host_info')
     def test_do_GET(self, mock_get_host_info):
         """Test that SimpleHTTPRequestHandler.do_GET properly serves host info"""
         # Setup test data - using a simple string

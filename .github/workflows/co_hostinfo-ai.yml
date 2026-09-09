@@ -95,12 +95,12 @@ jobs:
           context: ./python
           load: true
           push: false
-          tags: student/hostinfo:latest
+          tags: student/co_hostinfo:latest
 
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@0.28.0
         with:
-          image-ref: 'student/hostinfo:latest'
+          image-ref: 'student/co_hostinfo:latest'
           format: 'table'
           exit-code: '0'
           ignore-unfixed: true
